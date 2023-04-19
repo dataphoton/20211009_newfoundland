@@ -20,15 +20,23 @@
 <script>
 pannellum.viewer('panorama', {
     "autoLoad": true,
-    "type": "equirectangular",
-    "panorama": "./img/fogo_island_inn.jpg",
     "haov": 148.71,
     "vaov": 64.26,
     "vOffset": 8,
     "minHfov": 5,
     "hfov": 100,
     "yaw": 0,
-    "backgroundColor": [0.15, 0.15, 0.15]
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "type": "multires",
+    "multiRes": {
+        "basePath": "./img/fogo_island_inn",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 6,
+        "cubeResolution": 10736
+    }
 });
 </script>
 

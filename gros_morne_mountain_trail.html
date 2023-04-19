@@ -20,15 +20,23 @@
 <script>
 pannellum.viewer('panorama', {
     "autoLoad": true,
-    "type": "equirectangular",
-    "panorama": "./img/gros_morne_mountain_trail.jpg",
     "haov": 196.85,
     "vaov": 66.14,
     "vOffset": 2,
     "minHfov": 5,
     "hfov": 100,
     "yaw": 0,
-    "backgroundColor": [0.15, 0.15, 0.15]
+    "backgroundColor": [0.15, 0.15, 0.15],
+    "type": "multires",
+    "multiRes": {
+        "basePath": "./img/gros_morne_mountain_trail",
+        "path": "/%l/%s%y_%x",
+        "fallbackPath": "/fallback/%s",
+        "extension": "jpg",
+        "tileResolution": 512,
+        "maxLevel": 6,
+        "cubeResolution": 10736
+    }
 });
 </script>
 
